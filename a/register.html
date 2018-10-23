@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <style>
+        
+    </style>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+    $(document).ready(function () {
+        $("input").focus(function () {
+            $(this).css("background-color", "#C3B8D9");
+        });
+        $("input").blur(function () { $(this).css("background-color", "white"); });
+});
+    </script>
+</head>
+<body id="signin_body">
+    <h1>SIGN IN</h1>
+    <hr>
+    <form name="form" method="GET">
+            <div class="form_div">ID</div>
+            <input type="text" name="id" id="id" placeholder="userID"><br>
+            <div class="form_div">PW</div>
+            <input type="password" name="pw" id="pw" placeholder="*****"><br>
+            <div class="form_div">NAME</div>
+            <input type="text" name="name" id="name" placeholder="류정은"><br>
+            <div class="form_div">TEL</div>
+            <input type="tel" name="tel" id="tel" placeholder="010-1234-5678"><br>
+            <div class="form_div">E MAIL</div>
+            <input type="email" name="email" id="email" placeholder="email@domain.com"><br>
+            <div class="form_div">AGE</div>
+            <input type="text" name="age" id="age" placeholder="21">세<br>
+            <div class="form_div">BIRTHDATE</div>
+            <input type="date" name="birthdate" id="birthdate" value="1998-05-12"><br>
+            <div class="form_div">HEIGHT</div>
+            <input type="text" name="height" id="height" placeholder="160">CM<br>
+            <div class="form_div">WEIGHT</div>
+            <select name="weight" id="weight">
+                <option value="we1"> ~ 40 </option>
+                <option value="we2">40 ~ 49</option>
+                <option value="we3">50 ~ 59</option>
+                <option value="we4">60 ~ 69</option>
+                <option value="we5">70 ~ 79</option>
+                <option value="we6"> 80 ~ </option>
+            </select> KG<br>
+            <div class="form_div">ADDRESS</div>
+            <input type="text" name="addr" id="addr" size="40" placeholder="대구시 북구 복현동"> <br>
+            <div class="form_div">GENDER</div>
+            <input type="radio" name="gender" id="female" value="f" checked>여자
+            <input type="radio" name="gender" id="male" value="m">남자 <br>
+            <div class="form_div">HOBBY</div>
+            <input type="checkbox" name="hobby" id="reading" value="reading">독서 
+            <input type="checkbox" name="hobby" id="exercise" value="exercise">운동
+            <input type="checkbox" name="hobby" id="creating" value="creating">창작
+            <input type="checkbox" name="hobby" id="watching" value="watching" checked>영화 / 드라마 감상<br>
+            <div class="form_div">COMMENT</div>
+            <textarea name="" id="" cols="40" rows="5" placeholder="COMMENT"></textarea> <br>
+            <div id="reg_but">
+                <button type="submit">SUBMIT</button>
+                <button type="reset">RETRY</button>
+            </div>
+        
+    </form>
+</body>
+</html>

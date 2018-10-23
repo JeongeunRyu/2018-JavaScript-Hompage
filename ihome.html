@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MAIN PAGE</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $.ajax({
+            dataType: 'json',
+            url: 'a/data.json',
+            success: function (data) {
+                var goals = data.goal;//골값을 변수 골에 넣고
+                var table = $('#id');//테이블에 골 데이털ㄹ 담는다
+
+                for (var i in goals) {
+                    var goal = goals[i];//인덱스가 0이 되는데첫번째 객체를 객체를 0에 넣고
+                    var cnt = 0; //개수 세어줌
+                    for (var prop in goal) { // 골에 프로프를 넣음 으로써 json 객체가 가진 정보를 보여지며 
+                        var text = goal[prop];//
+                        var tr = table.find('tr').eq(parseInt(i) + 1);
+                        var td = tr.find('>td').eq(cnt);
+                        td.text(text);
+
+                        cnt++;
+                    }
+
+                }
+            },
+            error: function (request, status, error) {
+                alert("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" +
+                    error);
+            }
+
+        });
+    </script>
+</head>
+
+<body>
+    <section>
+
+        <div id="wrapper">
+            나의 목표!!!
+            <table id="id" border="1" cellpadding="10" cellspacing="0">
+                <tbody>
+                    <tr class="head">
+                        <td>과목</td>
+                        <td>세부과목</td>
+                        <td>목표치</td>
+                        <td>기간</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <article>
+            <iframe width="350" height="250" src="https://www.youtube.com/embed/BTdBR2REDiw?rel=0" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+
+            <iframe width="350" height="250" src="https://www.youtube.com/embed/vpcjWaZohtQ?rel=0" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+
+
+
+        </article>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+{
+
+    
+    "logindata":[
+
+        {
+    "id":"user",
+    "pw":"1234",
+    "name":"류정은"
+}
+],
+
+    
+    "goal":[
+        {
+         "name":"일본어",
+         "kind":"JPT",
+         "grade":"650",
+         "time":"2018년 9월"
+        },
+        {
+         "name":"일본어",
+            "kind":"JLPT",
+            "grade":"N2급",
+            "time":"2018년 12월"
+        },
+        {
+         "name":"전공",
+         "kind":"JAVA",
+         "grade":"네트워크 게임 제작",
+         "time":"2018년 12월"
+        },
+        {
+         "name":"전공",
+         "kind":"JAVA SCRIPT",
+         "grade":"홈페이지 제작",
+         "time":"2학년 10월"
+        }
+     ]
+
+
+   }

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MAIN PAGE</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+</head>
+
+<body id="if">
+    <header>
+
+
+        <div id="header_nav">
+            <inline id="signin">
+                <a id="ssignin">SIGN IN &nbsp;&nbsp;</a> <!-- 사인 인 -->
+                <input type="button" value=" &nbsp; &nbsp;LOG IN" id="loginbut" size="4" onclick="openlogin('login.html')"><!-- 클릭시 로그인 html 열림 -->
+            </inline>
+        </div>
+        <div id="header_img">
+            <a href="시작파일 MAINPAGE.html">
+                <img src="media/logo_w.svg" alt="logo" width=15%>
+            </a>
+        </div>
+    </header>
+    <div>
+        <nav id="nav_menu">
+            <ul>
+                <li id="home">
+                    <a>홈</a>
+                </li>
+                <li id="info">
+                    <a>자기소개</a>
+                </li>
+                <li id="loc">
+                    <a>현지학기제</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <section>
+        <div id="myModal" class="modal"><!-- 클릭시 모달 생성-->
+            <div class="modal-content">sssssssss</div>
+        </div>
+        <div id="change_frame"><!-- 여기서 누르는 메뉴에 따라 iframe 변경 >>> src 변경으로@@!  처음에는 ihome으로 기본 설정 돼 있음.-->
+            <iframe src='ihome.html' id="changing_frame" frameborder='0' width='100%' height='100%' scrolling='no'></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <audio id="audio" src="media/music.mp3" controls autoplay loop></audio>
+        <p>제작자 : 영진전문대학 컴퓨터정보계열 2WDJ 1701101 류정은
+            <br/> 이메일 : 0512_s2@naver.com</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        var modal = document.getElementById("myModal");
+
+        var signin = document.getElementById("ssignin");
+        signin.onclick = function () {
+            modal.style.display = "block"; //사인인 버튼 누르면 클릭시 block으로 변경
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none"; //윈도우 클릭하면 모달 보이지 않게
+            }
+        }
+
+        function removebut() {
+            var del = document.getElementById('loginbut');
+            del.remove(this); //로그인 버튼 지우는 함수
+        }
+
+
+        function openlogin(URL) {
+            window.open(URL, "LOGIN", "width=500,height=200,left=400,top=110"); //로그인 창 뜨게 하는 함수
+        }
+
+
+
+        $(document).ready(function () {
+            $("#ssignin").click(function () {
+                $(".modal-content").load("a/register.html");
+            });
+
+            $("#home").click(function () {
+                $("#changing_frame").attr("src", "ihome.html");
+            });
+
+            $("#info").click(function () {
+                $("#changing_frame").attr("src", "iinfo.html");
+            });
+
+            $("#loc").click(function () {
+                $("#changing_frame").attr("src", "ifloc.html");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

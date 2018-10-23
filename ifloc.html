@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MAIN PAGE</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+
+</head>
+
+<body>
+
+    </div>
+    <section>
+
+        <div id="map"></div> <!-- 이 부분에 map 들어오게 -->
+        <script>
+            function initMap() { //map 부르는 함수
+                var uluru = {
+                    lat: 33.6, //경도
+                    lng: 130.4 //위도
+                };
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 9, //9단계 ZOOM
+                    center: uluru // Center >>> uluru 값으로
+                });
+                var marker = new google.maps.Marker({
+                    position: uluru, //마커 위치도 uluru 값으로
+                    map: map
+                });
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl7Z3CoJWfpaxozbZXVtr21GENo5WfwUs&callback=initMap">/*사용자 인증 번호*/</script> 
+        <div id="fukuoka">후쿠오카 fukuoka 福岡</div>
+
+        <div>
+            <a href="#gallery"> <!-- 클릭시 갤러리로 이동 -->
+                <img src="media/arrow.png" width="6%" alt="이동">
+            </a>
+        </div>
+
+
+
+        <div id="overlay"></div>
+        <div id="gallery">
+            <ul id="photo-gallery">
+                <li>
+                    <a href="media/fuk1.jpg">
+                        <img src="media/fuk1.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="media/fuk2.jpg">
+                        <img src="media/fuk2.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="media/fuk3.jpg">
+                        <img src="media/fuk3.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="media/fuk4.jpg">
+                        <img src="media/fuk4.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="media/fuk5.jpg">
+                        <img src="media/fuk5.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="media/fuk6.jpg">
+                        <img src="media/fuk6.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="media/fuk7.jpg">
+                        <img src="media/fuk7.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="media/fuk8.jpg">
+                        <img src="media/fuk8.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="media/fuk9.jpg">
+                        <img src="media/fuk9.jpg">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="media/fuk10.jpg">
+                        <img src="media/fuk10.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="media/fuk11.jpg">
+                        <img src="media/fuk11.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="media/fuk12.jpg">
+                        <img src="media/fuk12.jpg">
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+    <script>
+        var $overlay = $('#overlay');
+        var $image = $("<img>");
+
+
+        $overlay.append($image);
+
+
+        $("body").append($overlay);
+
+
+        $("#photo-gallery a").click(function (event) {
+            event.preventDefault();
+            var imageLocation = $(this).attr("href");
+
+
+            $image.attr("src", imageLocation);
+
+
+            $overlay.show();
+        });
+
+        $("#overlay").click(function () {
+            $("#overlay").hide();
+        });
+    </script>
+</body>
+
+</html>

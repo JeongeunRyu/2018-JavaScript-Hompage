@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MAIN PAGE</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+
+    <section>
+        <div id="introduce">
+
+            <button id="ko" data-lang="ko">
+                <img src="media/kor-flag.png" width="35px" alt="kor">
+                <br>한국어</button>
+            <button id="jp" data-lang="jp">
+                <img src="media/jpn-flag.png" width="35px" alt="jpn">
+                <br>日本語</button>
+            <h1 data-langNum="0"></h1>
+
+
+            <h2 data-langNum="1">*******</h2>
+            <h2 data-langNum="2">언어를 선택 해 주세요!</h2>
+            <h2 data-langNum="3">*******</h2>
+            <h2 data-langNum="4"></h2>
+        </div>
+
+        <div id="introduce-2">
+
+            <input type="button" value="초등학교" id="element-stud" onclick="change()"></input>
+            <input type="button" value="중학교" id="mid-stud"></input>
+            <input type="button" value="고등학교" id="high-stud"></input>
+            <input type="button" value="대학교" id="college-stud"></input>
+
+           
+
+
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="change-lang.js"></script>
+    <script src="dom.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+
+            $("#mid-stud").click(function () {
+                $("#aboutme").attr("src", "mid.html");
+            });
+
+            $("#high-stud").click(function () {
+                $("#aboutme").attr("src", "high.html");
+            });
+
+            $("#college-stud").click(function () {
+                $("#aboutme").attr("src", "college.html");
+            });
+        });
+    </script>
+</body>
+
+</html>

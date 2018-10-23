@@ -1,0 +1,408 @@
+/* @import url('//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css'); */
+
+/*################### mainpage ###################*/
+
+* {
+    margin: auto;
+    padding: 0;
+    font-family: "맑은 고딕", "Malgun Gothic", sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    text-align: center;
+    margin: 0;
+}
+
+#if {
+    background-image: url("media/bg169.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: auto;
+}
+
+#nav_menu>ul>li {
+    padding: 0.5%;
+    border: 3px solid white;
+    background: white;
+    border-radius: 40px;
+    color: #5C5C99;
+    font-weight: bold;
+}
+
+#nav_menu>ul>li:hover {
+    color: #53535C;
+}
+
+#change_frame {
+    height: 100%;
+}
+
+#reg_but>button {
+    background: #6B4D99;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 30px;
+    font-size: 1.3em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+#reg_but>button:hover {
+    background: #fff;
+    color: #6B4D99;
+}
+
+#reg_but>button:before,
+#reg_but>button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #6B4D99;
+    transition: 400ms ease all;
+}
+
+#reg_but>button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+#reg_but>button:hover:before,
+#reg_but>button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+#wrapper {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+table {
+    margin-bottom: 3%;
+}
+
+table#id {
+    background-color: white;
+}
+
+#id .head {
+    background-color: #594680;
+    color: white;
+}
+
+table#id tbody .head {
+    font-size: 1.4rem;
+}
+
+#header_nav {
+    background-image: url(media/logo_long.png);
+    background-size: 12%;
+    background-repeat: no-repeat;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3.8%;
+    margin-top: 0;
+    text-align: right;
+    background-color: rgba(56, 56, 56, .6);
+}
+
+#header_nav>inline {
+    font-weight: bold;
+    margin-top: 0;
+    margin-right: 3%;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    text-decoration-color: white;
+    text-decoration-line: none;
+    font-family: "맑은 고딕", "Malgun Gothic", sans-serif;
+}
+
+#header_nav #logo {
+    float: left;
+    margin: 0;
+    left: -23%;
+    top: 0;
+}
+
+#header_img {
+    margin-top: 2.5%;
+}
+
+#nav_menu>ul>li {
+    cursor: pointer;
+    display: inline-block;
+}
+
+section {
+    margin-top: 1.2%;
+    width: 100%;
+    height: 1000px;
+    font-family: 'Iropke Batang', serif;
+}
+
+footer {
+    opacity: .8;
+    background-color: #ffffff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0.3%;
+    color: #666666 .7;
+}
+
+footer>p {
+    font-family: "맑은 고딕", "Malgun Gothic", sans-serif;
+    font-size: 0.6rem;
+}
+
+footer #audio {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+/*로그인 body*/
+
+#login_body {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/*################### 현지학기제 ###################*/
+
+#map {
+    width: 25%;
+    height: 25%;
+    background-color: grey;
+}
+
+#fukuoka {
+    color: #594680;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/*################### MODAL ###################*/
+
+.modal {
+    display: none;
+    /*기본값 : 숨기기*/
+    position: fixed;
+    z-index: 1;
+    padding-top: 1%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    font-size: 0.6rem;
+    border: 1px #fefefe;
+    border-radius: 20px;
+    background-color: #fefefe;
+    width: 30%;
+    padding: 1%;
+}
+
+.form_div {
+    padding: 1%;
+    color: #6B4D99;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+hr {
+    margin: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.modal-content>h1 {
+    font-size: 1.5rem;
+    color: #6B4D99;
+}
+
+#reg_but {
+    padding-top: 2%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*################### 자기소개 ###################*/
+
+#introduce {
+    margin-bottom: 1%;
+}
+
+#introduce>button {
+    background-color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-color: rgba(214, 199, 237, 0.5);
+    outline: none;
+}
+
+#introduce-2 {
+    background-color: #D8D3EB;
+    height: 200px;
+    width: 40%;
+}
+
+#info_frame_body {
+    background-color: #D8D3EB;
+    padding: 1%;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#aboutme {
+    height: 300px;
+}
+
+#introduce-2>input {
+    background: #6B4D99;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 30px;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+#introduce-2>input:hover {
+    background: #fff;
+    color: #6B4D99;
+}
+
+#introduce-2>input:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+#introduce-2>input:hover:before,
+#reg_but>input:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+/*################### 현지학기제 ###################*/
+
+#gallery {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
+    opacity: 0.8;
+    margin-left: 4%;
+}
+
+#gallery img {
+    width: 20%;
+    float: left;
+    display: block;
+    margin: 1%;
+}
+
+#gallery>ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 1%;
+    display: block;
+    max-width: 60%;
+    text-align: center;
+}
+
+/**********************************************/
+
+#overlay {
+    background: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    display: none;
+    text-align: center;
+}
+
+#overlay img {
+    margin: 10% auto 0;
+    width: 350px;
+    border-radius: 20px;
+}
+
+#gallery {
+    width: 100%;
+}
+
+#photo-gallery {
+    width: 100%;
+}
+
+iframe {
+    background-color: white;
+}
+
+
+
+#loginform {
+    padding: 2%;
+    background-color: #fefefe;
+    border-radius: 30px;
+}
+
+#loginbut {
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0);
+    ;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+#loginbut:hover {
+    background: rgba(0, 0, 0, 0);
+    ;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
